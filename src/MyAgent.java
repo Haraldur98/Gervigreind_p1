@@ -80,6 +80,7 @@ public class MyAgent implements Agent {
 
 				long endTime = System.nanoTime();
 				double duration = (endTime - startTime) / 1e9;
+				
 				// if the time is up or the depth limit is reached
 				if (duration >= playclock - 1 || currentBestMove == null) {
 					break;
