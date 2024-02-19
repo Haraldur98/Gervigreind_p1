@@ -1,0 +1,10 @@
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 5 width: 5
+Final Total Expansions: 19029
+Final Total Time: 0.0713104 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 5 width: 5
+Final Total Expansions: 10802
+Final Total Time: 0.0521256 seconds
+Final Total Depth Limit: 2

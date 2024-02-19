@@ -158,7 +158,7 @@ public class MyAgent implements Agent {
 		int distance = this.enviorment.evaluateDistance(this.role);
 		int mobility = this.enviorment.evaluateMobility(this.role);
 		int danger = this.enviorment.evaluateDangers(this.role);
-		int isGameOver = this.enviorment.current_state.isGameOver() ? 1000 : 0;
+		int isGameOver = this.enviorment.current_state.isGameOver() ? 10 : 0;
 
 		// wheights for the evaluation function 
 		int distanceWeight = 2;
