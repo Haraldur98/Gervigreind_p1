@@ -39,7 +39,7 @@ public class Enviorment {
         }
     
         // One step forward and two steps to the left or right
-        if (can_move_n_steps_forward(state, y, 1, this.height - 4)) {
+        if (can_move_n_steps_forward(state, y, 1, this.height - 2)) {
             if (x > 1 && state.board[x - 2][y + one_step] == EMPTY) {
                 moves.add(new Move(x, y, x - 2, y + one_step));
             }
