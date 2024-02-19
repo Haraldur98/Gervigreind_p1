@@ -49,7 +49,7 @@ public class Enviorment {
         }
     
         // Diagonal moves
-        if (can_move_n_steps_forward(state, y, 1, this.height - 3)) {
+        if (can_move_n_steps_forward(state, y, 1, this.height - 2)) {
             if (x > 0 && state.board[x - 1][y + one_step] == opponent) {
                 moves.add(new Move(x, y, x - 1, y + one_step));
             }

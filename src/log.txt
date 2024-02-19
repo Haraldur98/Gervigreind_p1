@@ -223,3 +223,113 @@ height: 10 width: 10
 Final Total Expansions: 55570
 Final Total Time: 0.10981475200000002 seconds
 Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 5147727
+Final Total Time: 8.245978666 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 48570
+Final Total Time: 0.087074294 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 87872
+Final Total Time: 0.18953416399999995 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 87089
+Final Total Time: 0.17474358000000006 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 61723
+Final Total Time: 0.128499918 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 68703
+Final Total Time: 0.144952042 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 77886
+Final Total Time: 0.16652433599999994 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 78300
+Final Total Time: 0.17146704300000007 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 73013
+Final Total Time: 0.17177608300000002 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 81961
+Final Total Time: 0.18592495800000006 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 75429
+Final Total Time: 0.17648062399999997 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 2544415
+Final Total Time: 4.200636501 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 79459
+Final Total Time: 0.15340575 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 83109
+Final Total Time: 0.18299054299999998 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 79150
+Final Total Time: 0.17772778699999994 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 67715
+Final Total Time: 0.148715126 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 1412359
+Final Total Time: 2.2861770440000004 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 2022979
+Final Total Time: 3.2681801659999996 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 2256636
+Final Total Time: 3.6927149160000003 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 6154984
+Final Total Time: 9.552267461000001 seconds
+Final Total Depth Limit: 3
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 70233
+Final Total Time: 0.15691416500000002 seconds
+Final Total Depth Limit: 1
+~~~~~~~~~~~GAME OUTPUT~~~~~~~~~~~
+height: 10 width: 10
+Final Total Expansions: 2021209
+Final Total Time: 3.2590252119999996 seconds
+Final Total Depth Limit: 3
