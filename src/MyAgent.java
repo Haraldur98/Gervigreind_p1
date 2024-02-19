@@ -77,13 +77,11 @@ public class MyAgent implements Agent
 
 				long endTime = System.nanoTime();
 				double duration = (endTime - startTime) / 1e9; 
-				
 				// if the time is up or the depth limit is reached
 				if (duration >= playclock - 1 || currentBestMove == null) {
 					break;
 				}
 		
-
 				bestMove = currentBestMove;
 				depth++;
 			}
@@ -154,7 +152,20 @@ public class MyAgent implements Agent
 
 	// Evaluate the current state of the game
 	public int evaluateState() {
-		return this.enviorment.current_state.evaluate(this.role);
+
+		int distance = this.enviorment.evaluateDistance(this.role);
+		int mobility = this.enviorment.evaluateMobility(this.role);
+		int danger = this.enviorment.evaluateDangers(this.role);
+		int isGameOver = this.enviorment.current_state.isGameOver() ? 1000 : 0;
+
+		// wheights for the evaluation function 
+		int distanceWeight = 1;
+		int mobilityWeight = 1;
+		int dangerWeight = 2;
+
+		int value = distanceWeight * distance + mobilityWeight * mobility + dangerWeight * danger + isGameOver;
+
+		return value;
 	}
 
 	// is called when the game is over or the match is aborted

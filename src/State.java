@@ -30,55 +30,6 @@ public class State {
         return false;
     }
 
-    // evaluate the state
-    public int evaluate(String role) {
-        int playerDistance = 0;
-        int opponentDistance = 0;
-        int playerMobility = 0;
-        int opponentMobility = 0;
-    
-        char playerPiece = role.equals("white") ? WHITE : BLACK;
-        char opponentPiece = role.equals("white") ? BLACK : WHITE;
-    
-        // Evaluate distance and mobility
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
-                if (board[i][j] == playerPiece) { // Player's piece
-                    playerDistance += (role.equals("white") ? height - j : j);
-                    playerMobility += countLegalMoves(i, j);
-                } else if (board[i][j] == opponentPiece) { // Opponent's piece
-                    opponentDistance += (role.equals("white") ? height - j : j);
-                    opponentMobility += countLegalMoves(i, j);
-                }
-            }
-        }
-    
-        // Evaluate positional advantage (example weights)
-        int playerPositionalAdvantage = 0;
-        int opponentPositionalAdvantage = 0;
-        playerPositionalAdvantage += (role.equals("white") ? board[width / 2][height - 1] == playerPiece ? 2 : 0 : board[width / 2][0] == playerPiece ? 2 : 0);
-        opponentPositionalAdvantage += (role.equals("white") ? board[width / 2][height - 1] == opponentPiece ? 2 : 0 : board[width / 2][0] == opponentPiece ? 2 : 0);
-    
-        // Combine the evaluation components with appropriate weights
-        int playerEvaluation = playerDistance * 2 + 2 * playerMobility + playerPositionalAdvantage;
-        int opponentEvaluation = opponentDistance * 2  + 2 * opponentMobility + opponentPositionalAdvantage;
-    
-        return playerEvaluation - opponentEvaluation;
-    }
-
-    // count the legal moves for a piece at (x, y)
-    public int countLegalMoves(int x, int y) {
-        int count = 0;
-
-        return count;
-    }
-
-    public int countDangers(int x, int y) {
-        int count = 0;
-
-
-        return count;
-    }
 
     //to string
     public String toString() {

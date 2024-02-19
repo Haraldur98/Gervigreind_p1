@@ -94,4 +94,103 @@ public class Enviorment {
         state.is_white_turn = !state.is_white_turn;
     }
 
+
+    ///////////////////////////////////////////////////////////////////////////// EVALUATION FUNCTIONS ///////////////////////////////////////////////////////////////////////////////
+
+    // evaluate the distance of the pieces 
+    public int evaluateDistance(String role) {
+        int playerDistance = 0;
+        int opponentDistance = 0;
+    
+        char playerPiece = role.equals("white") ? WHITE : BLACK;
+        char opponentPiece = role.equals("white") ? BLACK : WHITE;
+    
+        // Evaluate distance and mobility
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                if (current_state.board[i][j] == playerPiece) { // Player's piece
+                    playerDistance += (role.equals("white") ? height - j : j);
+                } else if (current_state.board[i][j] == opponentPiece) { // Opponent's piece
+                    opponentDistance += (role.equals("white") ? height - j : j);
+                }
+            }
+        }
+        return playerDistance - opponentDistance;
+    }
+    
+    public int evaluateDangers(String role) {
+        int playerDangers = 0;
+        int opponentDangers = 0;
+    
+        char playerPiece = role.equals("white") ? WHITE : BLACK;
+        char opponentPiece = role.equals("white") ? BLACK : WHITE;
+    
+        // Iterate through the board and evaluate dangers for each piece
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                if (current_state.board[i][j] == playerPiece) { // Player's piece
+                    // Check if the piece is surrounded by opponent pieces
+                    if (isSurroundedByOpponent(current_state, i, j, playerPiece)) {
+                        playerDangers++;
+                    }
+                } else if (current_state.board[i][j] == opponentPiece) { // Opponent's piece
+                    // Check if the piece is surrounded by player pieces
+                    if (isSurroundedByOpponent(current_state, i, j, opponentPiece)) {
+                        opponentDangers++;
+                    }
+                }
+            }
+        }
+        return playerDangers - opponentDangers;
+    }
+    
+    // Helper function to check if a piece is surrounded by opponent pieces
+    private boolean isSurroundedByOpponent(State state, int x, int y, char opponentPiece) {
+        int[][] diagonalDirections = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1}}; // Diagonal positions
+    
+        // Check each adjacent position
+        for (int[] dir : diagonalDirections) {
+            int newX = x + dir[0];
+            int newY = y + dir[1];
+            if (isValidPosition(newX, newY, state.width, state.height) && state.board[newX][newY] == opponentPiece) {
+                return true; // Piece is surrounded by opponent pieces
+            }
+        }
+        return false; // Piece is not surrounded by opponent pieces
+    }
+    
+    // Helper function to check if a position is valid on the board
+    private boolean isValidPosition(int x, int y, int width, int height) {
+        return x >= 0 && x < width && y >= 0 && y < height;
+    }
+    
+
+
+    // evaluate mobility of the pieces 
+    public int evaluateMobility(String role) {
+        int playerMobility = 0;
+        int opponentMobility = 0;
+
+        char playerPiece = role.equals("white") ? WHITE : BLACK;
+        char opponentPiece = role.equals("white") ? BLACK : WHITE;
+
+        ArrayList<Move> moves = new ArrayList<Move>();
+
+        // Evaluate distance and mobility
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                if (current_state.board[i][j] == playerPiece) { // Player's piece
+                    get_moves(current_state, moves, i, j);
+                    playerMobility += moves.size();
+                    moves.clear();
+                } else if (current_state.board[i][j] == opponentPiece) { // Opponent's piece
+                    get_moves(current_state, moves, i, j);
+                    opponentMobility += moves.size();
+                    moves.clear();
+                }
+            }
+        }
+        return playerMobility - opponentMobility;
+    }
+
 }
