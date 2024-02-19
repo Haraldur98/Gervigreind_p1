@@ -159,9 +159,9 @@ public class MyAgent implements Agent
 		int isGameOver = this.enviorment.current_state.isGameOver() ? 1000 : 0;
 
 		// wheights for the evaluation function 
-		int distanceWeight = 10;
+		int distanceWeight = 2;
 		int mobilityWeight = 1;
-		int dangerWeight = 2;
+		int dangerWeight = 3;
 
 		int value = distanceWeight * distance + mobilityWeight * mobility + dangerWeight * danger + isGameOver;
 
